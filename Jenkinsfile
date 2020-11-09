@@ -1,6 +1,5 @@
 @Library('piper-lib-os')
 node() {
-    
     stages{
         stage('prepare') {
             checkout scm
