@@ -1,10 +1,15 @@
-@Library('piper-lib-os')
+@Library('piper-library-os')
 node() {
     stage('prepare') {
+        echo 'Prepare stage starting.'
         checkout scm
         setupCommonPipelineEnvironment script:this
+        echo 'Prepare stage Ended.'
     }
     stage('build') {
-         mtaBuild script: this
+        echo 'Build stage starting.'
+        mtaBuild script: this
+        echo 'Prepare stage Ended.'
     }
 }
+
