@@ -1,6 +1,7 @@
 @Library('piper-library-os')
 node() {
     stage('prepare') {
+        println("Outside class")
         echo 'Prepare stage starting.'
         checkout scm
         setupCommonPipelineEnvironment script:this
