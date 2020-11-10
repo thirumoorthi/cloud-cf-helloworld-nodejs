@@ -2,7 +2,7 @@
 node() {
     stage('prepare') {
         println("Outside class")
-        echo 'Prepare stage starting.'
+        echo "Prepare stage starting"
         checkout scm
         setupCommonPipelineEnvironment script:this
         echo 'Prepare stage Ended.'
